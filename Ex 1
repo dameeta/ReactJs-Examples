@@ -1,0 +1,28 @@
+Create a Card component that one often sees on social media platforms
+===================================================================================
+import React from 'react'
+import styled from 'styled-components'
+const Title = styled.h2`
+  color: #fhg;
+  font-weight: 300;
+`
+const Date = styled.div`
+  color: #fhg;
+  font-weight: 300;
+  margin: 6px 0;
+`
+const Description = styled.p`
+  color: #fhg;
+  font-weight: 300;
+`
+const App = (props) => (
+  <div style={{ color: 'blue' }}>
+    <Title>The Importance of trees</Title>
+    <Date>30/0/2022</Date>
+    <Description>
+    Trees are vital. As the biggest plants on the planet, they give us oxygen,
+     store carbon, stabilise the soil and give life to the world's wildlife. They also provide us with the materials for tools and shelter.
+</Description>
+  </div>
+)
+export default App
