@@ -1,0 +1,66 @@
+
+Create a toggle button for a hypothetical space-craft’s guidance system panel
+=====================================================================================================
+Below is the step by step implementation:
+
+Step 1: Create a project in react-native using the following command:
+
+npx react-native init DemoProject
+Step 2: Install react-native paper using the following command:
+
+npm install react-native-paper
+Step 3: Create a components folder inside your project. Inside the components folder create a file ToggleSwitch.js
+
+Project Structure: It will look like this.
+
+
+
+Example: Write down the code in respective files. In ToggleSwitch.js , we will import Switch Component from ‘react-native-paper’  library .
+
+import React, {useState, useEffect} from 'react';
+import { Text, View , StyleSheet, Alert} from 'react-native';
+import { Switch} from 'react-native-paper' ;
+  
+const ToggleSwitchExample = () =>{
+    const [switchOn, setSwitchOn] = useState(false)
+  
+    return(
+        <View style ={styles.container}>
+            <Text>Toggle Switch</Text>
+            <Switch value={switchOn} onValueChange={() => {
+                setSwitchOn(!switchOn)
+                Alert.alert("Switch on : " + !switchOn)} }/>
+        </View>
+    )
+}
+  
+export default ToggleSwitchExample ;
+  
+const styles = StyleSheet.create({
+     container:{
+         padding:45,
+         flexDirection:'row',
+         justifyContent:'space-around'
+     }
+})
+Now import this file in your App.js file
+
+import React from 'react';
+import type { Node } from 'react';
+import { View } from 'react-native';
+import ToggleSwitchExample from './components/ToggleSwitch';
+  
+const App: () => Node = () => {
+   return (
+      <View>
+           
+          <ToggleSwitchExample />
+       </View>
+      
+  );
+};
+  
+export default App;
+Step to run the application: Run the application using the following command:
+
+npx react-native run-android
