@@ -1,3 +1,4 @@
+$env:NODE_OPTIONS="--openssl-legacy-provider"
 
 Create a toggle button for a hypothetical space-craft’s guidance system panel
 =====================================================================================================
